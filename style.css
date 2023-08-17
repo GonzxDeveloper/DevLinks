@@ -74,7 +74,7 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
 	background: var(--bg-url) no-repeat top center/cover;
-    border-radius: 12px;
+  border-radius: 12px;
   box-shadow: 0 0 20px #0000007d;
 }
 
