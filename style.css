@@ -139,6 +139,7 @@ body::-webkit-scrollbar-thumb {
   transform: translateY(-50%);
 
   animation: slide-back 0.4s;
+  transition: 300ms;
 }
 
 .light #switch button{
@@ -147,6 +148,7 @@ body::-webkit-scrollbar-thumb {
 
 #switch button:hover{
   outline: 8px solid var(--highlight-color);
+
 }
 
 #switch span{
@@ -215,13 +217,12 @@ ul li a:hover {
 
   transition: background 0.2s;
   border-radius: 50%;
-
+  
   transition: 400ms;
 }
 
 #social-links a:hover {
   background: var(--highlight-color);
-  
   transform: scale(1.05);
 }
 
