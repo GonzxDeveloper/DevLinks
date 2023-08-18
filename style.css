@@ -25,41 +25,8 @@
 }
 
 body {
-  background: var(--bg-url) no-repeat top center;
-  animation: aparecer 1s linear;
-  transition: 400ms;
-  background-size: 175%;
-  animation: mover-bg 23.5s infinite linear;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-@keyframes aparecer{
-
-  0%{
-    opacity: 0;
-  }
-
-  100%{
-    opacity: 0;
-  }
-}
-
-@keyframes mover-bg{
-
-  0%{
-    background-position: 100% 100%;
-  }
-
-  50%{
-    background-position: 50% 50%;
-  }
-
-  100%{
-  background-position: 100% 100%;
-  }
+  background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -67,36 +34,11 @@ body * {
   color: var(--text-color);
 }
 
-body::-webkit-scrollbar {
-	width: 14px;
-}
-
-
-body::-webkit-scrollbar-thumb {
-	background: var(--bg-url) no-repeat top center/cover;
-  border-radius: 12px;
-  box-shadow: 0 0 20px #0000007d;
-}
-
 #container {
   width: 100%;
   max-width: 588px;
   margin: 56px auto 0px;
   padding: 0 24px;
-  animation: subir 1.35s linear;
-  transform: scale(1);
-  transition: 400ms;
-}
-
-@keyframe subir{
-
-  0%{
-    transform: scale(0);
-  }
-
-  100%{
-    transform: scale(1);
-  }
 }
 
 /* profile */
@@ -139,7 +81,6 @@ body::-webkit-scrollbar-thumb {
   transform: translateY(-50%);
 
   animation: slide-back 0.4s;
-  transition: 300ms;
 }
 
 .light #switch button{
@@ -148,7 +89,6 @@ body::-webkit-scrollbar-thumb {
 
 #switch button:hover{
   outline: 8px solid var(--highlight-color);
-
 }
 
 #switch span{
@@ -179,23 +119,28 @@ ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
+
   padding: 16px 24px;
+
   background-color: var(-surface-color);
   border: 1px solid var(--stroke-color);
   border-radius: 8px;
+
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+
   text-decoration: none;
   font-weight: 500;
+
   transition: 400ms;
-  box-shadow: 0 0 20px #0000005c;
+  box-shadow: 0 0 10px #0000005c;
 }
 
 /* pseudo-selector */
-ul li a:hover {
+  ul li a:hover {
   background-color: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
-  transform: scale(1.03);
+  transform: scale(1.05);
   box-shadow: 0 0 20px #00000045;
 }
 
@@ -206,7 +151,6 @@ ul li a:hover {
   padding: 22px 0;
 
   font-size: 24px;
-  
 }
 
 #social-links a {
@@ -217,7 +161,6 @@ ul li a:hover {
 
   transition: background 0.2s;
   border-radius: 50%;
-  
   transition: 400ms;
 }
 
@@ -235,9 +178,7 @@ footer {
 /* media queries */
 @media (min-width: 700px) {
   :root {
-    --bg-url: url(
-    ./assets/bg-desktop.jpg);
-    height: 100%;
+    --bg-url: url(./assets/bg-desktop.jpg);
   }
 
   .light {
